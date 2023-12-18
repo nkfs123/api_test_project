@@ -3,6 +3,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.Test;
 import io.restassured.RestAssured;
+import org.junit.jupiter.api.DisplayName;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -18,6 +19,8 @@ public class SingleFilmTests {
 		sendGetFilmsRequest();
 	}
 	@Test
+	@DisplayName("Use cases 1 - 2 : Find the film with latest release date AND Using previous response (1) find the tallest person among the characters that\n" +
+			"were part of that film.")
 	public void findTallestPersonPlayedInFilmWithLatestReleaseDate() throws JsonProcessingException {
 		GetFilmsResponse.Films film = findFilmWithLatestReleaseDate();
 		List<GetPeopleResponse> listOfPeopleInTheFilm = new ArrayList<>();

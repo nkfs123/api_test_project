@@ -3,6 +3,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,7 @@ public class AllFilmsTests {
 	}
 
 	@Test
+	@DisplayName("Use Case 3: Find the tallest person ever played in any Star Wars film.")
 	public void findTallestPersonOfAllFilms() throws JsonProcessingException {
 		int j = 0;
 		int largestHeight = 0;
